@@ -35,7 +35,7 @@ class FirstLevel: SKScene, SKPhysicsContactDelegate {
         for touch in touches {
             let location = touch.location(in: self)
             
-            Hero.stopWalk()
+
             print("Idle dammnit!")
             
                     }
