@@ -23,8 +23,8 @@ class FirstLevel: SKScene, SKPhysicsContactDelegate {
         self.backgroundColor = SKColor.black()
         
         Hero.position = CGPoint(x: 0, y: 0)
-        
         self.addChild(Hero)
+        //self.addChild(animations)
         
 
            }
@@ -34,6 +34,7 @@ class FirstLevel: SKScene, SKPhysicsContactDelegate {
         
         for touch in touches {
             let location = touch.location(in: self)
+            //animations.stopWalk()
             
 
             print("Idle dammnit!")

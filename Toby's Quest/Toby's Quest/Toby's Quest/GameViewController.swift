@@ -22,7 +22,7 @@ class GameViewController: UIViewController {
             skView.showsPhysics = true
             skView.showsDrawCount = true
             skView.isMultipleTouchEnabled = true
-           // animations.setUpIdleAction()
+            animations.setUpIdleAction()
         
             
             

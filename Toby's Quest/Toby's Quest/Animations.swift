@@ -9,7 +9,11 @@
 import Foundation
 import SpriteKit
 
-class Animations: SKSpriteNode{
+class Animations: SKSpriteNode {
+    
+    //MARK:---------------------------HeroAnimations
+    
+    
     
     func setUpIdleAction() {
         

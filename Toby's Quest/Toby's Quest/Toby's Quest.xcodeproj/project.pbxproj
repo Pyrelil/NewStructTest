@@ -13,6 +13,9 @@
 		4A09D4A71D1D792800A0BDFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A09D4A51D1D792800A0BDFD /* Main.storyboard */; };
 		4A09D4A91D1D792800A0BDFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A09D4A81D1D792800A0BDFD /* Assets.xcassets */; };
 		4A09D4AC1D1D792800A0BDFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A09D4AA1D1D792800A0BDFD /* LaunchScreen.storyboard */; };
+		4A5263771D1EF0E200336FD1 /* platforms.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4A5263761D1EF0E200336FD1 /* platforms.atlas */; };
+		4A5263791D1F045C00336FD1 /* Jump.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4A5263781D1F045C00336FD1 /* Jump.atlas */; };
+		4A52637B1D1F048500336FD1 /* Walk.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4A52637A1D1F048500336FD1 /* Walk.atlas */; };
 		4A561FE11D1DFA7D00E617CD /* MyTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4A561FE01D1DFA7D00E617CD /* MyTileSet.sks */; };
 		4A9E172B1D1D80B6008D6F2A /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9E172A1D1D80B6008D6F2A /* Hero.swift */; };
 		4A9E172D1D1D8163008D6F2A /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9E172C1D1D8163008D6F2A /* Character.swift */; };
@@ -32,6 +35,9 @@
 		4A09D4A81D1D792800A0BDFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Toby's Quest/Assets.xcassets"; sourceTree = "<group>"; };
 		4A09D4AB1D1D792800A0BDFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A09D4AD1D1D792800A0BDFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A5263761D1EF0E200336FD1 /* platforms.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = platforms.atlas; sourceTree = "<group>"; };
+		4A5263781D1F045C00336FD1 /* Jump.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Jump.atlas; sourceTree = "<group>"; };
+		4A52637A1D1F048500336FD1 /* Walk.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Walk.atlas; sourceTree = "<group>"; };
 		4A561FE01D1DFA7D00E617CD /* MyTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyTileSet.sks; sourceTree = "<group>"; };
 		4A9E172A1D1D80B6008D6F2A /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		4A9E172C1D1D8163008D6F2A /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -135,6 +141,9 @@
 		4A9E17341D1D8CC1008D6F2A /* Atlas */ = {
 			isa = PBXGroup;
 			children = (
+				4A52637A1D1F048500336FD1 /* Walk.atlas */,
+				4A5263781D1F045C00336FD1 /* Jump.atlas */,
+				4A5263761D1EF0E200336FD1 /* platforms.atlas */,
 				4A9E17371D1D8D86008D6F2A /* HeroIdle.atlas */,
 			);
 			name = Atlas;
@@ -202,11 +211,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A561FE11D1DFA7D00E617CD /* MyTileSet.sks in Resources */,
+				4A5263791D1F045C00336FD1 /* Jump.atlas in Resources */,
 				4A09D4AC1D1D792800A0BDFD /* LaunchScreen.storyboard in Resources */,
+				4A52637B1D1F048500336FD1 /* Walk.atlas in Resources */,
 				4A9E17381D1D8D86008D6F2A /* HeroIdle.atlas in Resources */,
 				4A09D4A91D1D792800A0BDFD /* Assets.xcassets in Resources */,
 				4A9E17331D1D861E008D6F2A /* FirstLevel.sks in Resources */,
 				4A09D4A71D1D792800A0BDFD /* Main.storyboard in Resources */,
+				4A5263771D1EF0E200336FD1 /* platforms.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

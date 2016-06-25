@@ -23,26 +23,18 @@ class hero: character,pTargetable{
         
         let hTexture = texturesPlayer
         let xSize = hTexture.size().width           // Create The texture for the top ( visible sprite )
-        let ySize = hTexture.size().height
-        let size = CGSize(width: xSize, height: ySize)
+        let ySize = hTexture.size().height / 3
+        //let size = CGSize(width: xSize, height: ySize)
 
-        self.physicsBody = SKPhysicsBody(texture: hTexture, size: size)
+        self.physicsBody = SKPhysicsBody(circleOfRadius: ySize, center: CGPoint(x: -5, y: -11))
         self.physicsBody?.isDynamic = false
         self.physicsBody?.affectedByGravity = false            // ( physical body stuff )
         self.physicsBody?.mass = 1.0
         self.name = "hero"
+        self.zPosition = layers.characters
         
-        let top = SKSpriteNode(texture: hTexture, size: size)
-        top.zPosition = layers.characters
-        top.color = SKColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        top.colorBlendFactor = 1.0
-         
-        animations.setUpIdleAction()
         animations.stopWalk()
-    
 
-        // add the top sprite
-        self.addChild(top)
         self.addChild(animations)
         
     }
