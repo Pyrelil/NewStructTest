@@ -10,6 +10,14 @@ import UIKit
 import SpriteKit
 
 class GameViewController: UIViewController {
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        if UIDevice.current().userInterfaceIdiom == .phone {
+            return .landscape
+        } else {
+            return .landscape
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +31,9 @@ class GameViewController: UIViewController {
             skView.showsDrawCount = true
             skView.isMultipleTouchEnabled = true
             animations.setUpIdleAction()
+            animations.setUpJumpAction()
+            animations.setUpWalkAnimation()
+            controls.setupButtons()
         
             
             
@@ -31,6 +42,7 @@ class GameViewController: UIViewController {
             
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .aspectFill
+           // scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
             
             //Set scene size. 
             scene.size = skView.bounds.size
@@ -42,14 +54,6 @@ class GameViewController: UIViewController {
 
     override func shouldAutorotate() -> Bool {
         return true
-    }
-
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        if UIDevice.current().userInterfaceIdiom == .phone {
-            return .landscape
-        } else {
-            return .landscape
-        }
     }
 
     override func didReceiveMemoryWarning() {

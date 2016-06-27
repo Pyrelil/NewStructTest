@@ -13,10 +13,11 @@
 		4A09D4A71D1D792800A0BDFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A09D4A51D1D792800A0BDFD /* Main.storyboard */; };
 		4A09D4A91D1D792800A0BDFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A09D4A81D1D792800A0BDFD /* Assets.xcassets */; };
 		4A09D4AC1D1D792800A0BDFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A09D4AA1D1D792800A0BDFD /* LaunchScreen.storyboard */; };
-		4A5263771D1EF0E200336FD1 /* platforms.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4A5263761D1EF0E200336FD1 /* platforms.atlas */; };
 		4A5263791D1F045C00336FD1 /* Jump.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4A5263781D1F045C00336FD1 /* Jump.atlas */; };
 		4A52637B1D1F048500336FD1 /* Walk.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4A52637A1D1F048500336FD1 /* Walk.atlas */; };
 		4A561FE11D1DFA7D00E617CD /* MyTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4A561FE01D1DFA7D00E617CD /* MyTileSet.sks */; };
+		4A9A133D1D1F3A2F007F60FE /* PlatformNodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A133C1D1F3A2F007F60FE /* PlatformNodes.swift */; };
+		4A9A13401D201733007F60FE /* Controls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A133F1D201733007F60FE /* Controls.swift */; };
 		4A9E172B1D1D80B6008D6F2A /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9E172A1D1D80B6008D6F2A /* Hero.swift */; };
 		4A9E172D1D1D8163008D6F2A /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9E172C1D1D8163008D6F2A /* Character.swift */; };
 		4A9E172F1D1D81B9008D6F2A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9E172E1D1D81B9008D6F2A /* Protocols.swift */; };
@@ -35,10 +36,11 @@
 		4A09D4A81D1D792800A0BDFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Toby's Quest/Assets.xcassets"; sourceTree = "<group>"; };
 		4A09D4AB1D1D792800A0BDFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A09D4AD1D1D792800A0BDFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A5263761D1EF0E200336FD1 /* platforms.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = platforms.atlas; sourceTree = "<group>"; };
 		4A5263781D1F045C00336FD1 /* Jump.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Jump.atlas; sourceTree = "<group>"; };
 		4A52637A1D1F048500336FD1 /* Walk.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Walk.atlas; sourceTree = "<group>"; };
-		4A561FE01D1DFA7D00E617CD /* MyTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyTileSet.sks; sourceTree = "<group>"; };
+		4A561FE01D1DFA7D00E617CD /* MyTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = MyTileSet.sks; path = "Toby's Quest/MyTileSet.sks"; sourceTree = "<group>"; };
+		4A9A133C1D1F3A2F007F60FE /* PlatformNodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformNodes.swift; sourceTree = "<group>"; };
+		4A9A133F1D201733007F60FE /* Controls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controls.swift; sourceTree = "<group>"; };
 		4A9E172A1D1D80B6008D6F2A /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		4A9E172C1D1D8163008D6F2A /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		4A9E172E1D1D81B9008D6F2A /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
@@ -63,6 +65,8 @@
 			isa = PBXGroup;
 			children = (
 				4A09D49C1D1D792800A0BDFD /* Toby's Quest */,
+				4A9E17301D1D8239008D6F2A /* Global.swift */,
+				4A561FE01D1DFA7D00E617CD /* MyTileSet.sks */,
 				4A9E17341D1D8CC1008D6F2A /* Atlas */,
 				4A09D4A81D1D792800A0BDFD /* Assets.xcassets */,
 				4A09D49B1D1D792800A0BDFD /* Products */,
@@ -80,14 +84,31 @@
 		4A09D49C1D1D792800A0BDFD /* Toby's Quest */ = {
 			isa = PBXGroup;
 			children = (
-				4A561FE01D1DFA7D00E617CD /* MyTileSet.sks */,
-				4A9E17291D1D8063008D6F2A /* Characters */,
 				4A9E17241D1D7F12008D6F2A /* VController */,
 				4A9E17251D1D7F29008D6F2A /* Levels */,
 				4A9E17271D1D7FA6008D6F2A /* StoryBoards */,
 				4A9E17261D1D7F3F008D6F2A /* Info/Del */,
+				4A9A133B1D1F3A04007F60FE /* NodeSettings */,
+				4A9E17291D1D8063008D6F2A /* Characters */,
+				4A9A133E1D2015FF007F60FE /* UIControl */,
 			);
 			path = "Toby's Quest";
+			sourceTree = "<group>";
+		};
+		4A9A133B1D1F3A04007F60FE /* NodeSettings */ = {
+			isa = PBXGroup;
+			children = (
+				4A9A133C1D1F3A2F007F60FE /* PlatformNodes.swift */,
+			);
+			name = NodeSettings;
+			sourceTree = "<group>";
+		};
+		4A9A133E1D2015FF007F60FE /* UIControl */ = {
+			isa = PBXGroup;
+			children = (
+				4A9A133F1D201733007F60FE /* Controls.swift */,
+			);
+			name = UIControl;
 			sourceTree = "<group>";
 		};
 		4A9E17241D1D7F12008D6F2A /* VController */ = {
@@ -102,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				4A09D4A11D1D792800A0BDFD /* FirstLevel.swift */,
+				4A9E17321D1D861E008D6F2A /* FirstLevel.sks */,
 			);
 			name = Levels;
 			sourceTree = "<group>";
@@ -120,7 +142,6 @@
 			children = (
 				4A09D4AA1D1D792800A0BDFD /* LaunchScreen.storyboard */,
 				4A09D4A51D1D792800A0BDFD /* Main.storyboard */,
-				4A9E17321D1D861E008D6F2A /* FirstLevel.sks */,
 			);
 			name = StoryBoards;
 			sourceTree = "<group>";
@@ -129,9 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				4A9E172C1D1D8163008D6F2A /* Character.swift */,
-				4A9E172A1D1D80B6008D6F2A /* Hero.swift */,
 				4A9E172E1D1D81B9008D6F2A /* Protocols.swift */,
-				4A9E17301D1D8239008D6F2A /* Global.swift */,
+				4A9E172A1D1D80B6008D6F2A /* Hero.swift */,
 				4A9E17391D1DA3E2008D6F2A /* Animations.swift */,
 			);
 			name = Characters;
@@ -143,7 +163,6 @@
 			children = (
 				4A52637A1D1F048500336FD1 /* Walk.atlas */,
 				4A5263781D1F045C00336FD1 /* Jump.atlas */,
-				4A5263761D1EF0E200336FD1 /* platforms.atlas */,
 				4A9E17371D1D8D86008D6F2A /* HeroIdle.atlas */,
 			);
 			name = Atlas;
@@ -218,7 +237,6 @@
 				4A09D4A91D1D792800A0BDFD /* Assets.xcassets in Resources */,
 				4A9E17331D1D861E008D6F2A /* FirstLevel.sks in Resources */,
 				4A09D4A71D1D792800A0BDFD /* Main.storyboard in Resources */,
-				4A5263771D1EF0E200336FD1 /* platforms.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,9 +250,11 @@
 				4A09D4A21D1D792800A0BDFD /* FirstLevel.swift in Sources */,
 				4A09D4A41D1D792800A0BDFD /* GameViewController.swift in Sources */,
 				4A9E172D1D1D8163008D6F2A /* Character.swift in Sources */,
+				4A9A133D1D1F3A2F007F60FE /* PlatformNodes.swift in Sources */,
 				4A9E172F1D1D81B9008D6F2A /* Protocols.swift in Sources */,
 				4A09D49E1D1D792800A0BDFD /* AppDelegate.swift in Sources */,
 				4A9E172B1D1D80B6008D6F2A /* Hero.swift in Sources */,
+				4A9A13401D201733007F60FE /* Controls.swift in Sources */,
 				4A9E173A1D1DA3E2008D6F2A /* Animations.swift in Sources */,
 				4A9E17311D1D8239008D6F2A /* Global.swift in Sources */,
 			);
@@ -353,6 +373,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Toby's Quest/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "PyreArts.Toby-s-Quest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -366,6 +387,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Toby's Quest/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "PyreArts.Toby-s-Quest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
