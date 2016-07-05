@@ -12,8 +12,6 @@ import UIKit
 
 
 
-//var tileSet: SKTileSet {Platform}
-
 
 
 class PlatformNodes: SKSpriteNode {

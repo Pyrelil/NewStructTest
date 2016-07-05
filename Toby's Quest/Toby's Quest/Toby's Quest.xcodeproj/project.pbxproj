@@ -13,8 +13,6 @@
 		4A09D4A71D1D792800A0BDFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A09D4A51D1D792800A0BDFD /* Main.storyboard */; };
 		4A09D4A91D1D792800A0BDFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A09D4A81D1D792800A0BDFD /* Assets.xcassets */; };
 		4A09D4AC1D1D792800A0BDFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A09D4AA1D1D792800A0BDFD /* LaunchScreen.storyboard */; };
-		4A5263791D1F045C00336FD1 /* Jump.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4A5263781D1F045C00336FD1 /* Jump.atlas */; };
-		4A52637B1D1F048500336FD1 /* Walk.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4A52637A1D1F048500336FD1 /* Walk.atlas */; };
 		4A561FE11D1DFA7D00E617CD /* MyTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4A561FE01D1DFA7D00E617CD /* MyTileSet.sks */; };
 		4A9A133D1D1F3A2F007F60FE /* PlatformNodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A133C1D1F3A2F007F60FE /* PlatformNodes.swift */; };
 		4A9A13401D201733007F60FE /* Controls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A133F1D201733007F60FE /* Controls.swift */; };
@@ -22,9 +20,9 @@
 		4A9E172D1D1D8163008D6F2A /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9E172C1D1D8163008D6F2A /* Character.swift */; };
 		4A9E172F1D1D81B9008D6F2A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9E172E1D1D81B9008D6F2A /* Protocols.swift */; };
 		4A9E17311D1D8239008D6F2A /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9E17301D1D8239008D6F2A /* Global.swift */; };
-		4A9E17331D1D861E008D6F2A /* FirstLevel.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4A9E17321D1D861E008D6F2A /* FirstLevel.sks */; };
-		4A9E17381D1D8D86008D6F2A /* HeroIdle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4A9E17371D1D8D86008D6F2A /* HeroIdle.atlas */; };
 		4A9E173A1D1DA3E2008D6F2A /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9E17391D1DA3E2008D6F2A /* Animations.swift */; };
+		4AE17F461D243CD2000624EB /* FirstLevel.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4AE17F451D243CD2000624EB /* FirstLevel.sks */; };
+		4AE197801D241FBB0004AAED /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4AE1977F1D241FBB0004AAED /* Actions.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +34,6 @@
 		4A09D4A81D1D792800A0BDFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Toby's Quest/Assets.xcassets"; sourceTree = "<group>"; };
 		4A09D4AB1D1D792800A0BDFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A09D4AD1D1D792800A0BDFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A5263781D1F045C00336FD1 /* Jump.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Jump.atlas; sourceTree = "<group>"; };
-		4A52637A1D1F048500336FD1 /* Walk.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Walk.atlas; sourceTree = "<group>"; };
 		4A561FE01D1DFA7D00E617CD /* MyTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = MyTileSet.sks; path = "Toby's Quest/MyTileSet.sks"; sourceTree = "<group>"; };
 		4A9A133C1D1F3A2F007F60FE /* PlatformNodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformNodes.swift; sourceTree = "<group>"; };
 		4A9A133F1D201733007F60FE /* Controls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controls.swift; sourceTree = "<group>"; };
@@ -45,9 +41,9 @@
 		4A9E172C1D1D8163008D6F2A /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		4A9E172E1D1D81B9008D6F2A /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		4A9E17301D1D8239008D6F2A /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
-		4A9E17321D1D861E008D6F2A /* FirstLevel.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FirstLevel.sks; sourceTree = "<group>"; };
-		4A9E17371D1D8D86008D6F2A /* HeroIdle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = HeroIdle.atlas; sourceTree = "<group>"; };
 		4A9E17391D1DA3E2008D6F2A /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		4AE17F451D243CD2000624EB /* FirstLevel.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FirstLevel.sks; sourceTree = "<group>"; };
+		4AE1977F1D241FBB0004AAED /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				4A09D4A11D1D792800A0BDFD /* FirstLevel.swift */,
-				4A9E17321D1D861E008D6F2A /* FirstLevel.sks */,
+				4AE17F451D243CD2000624EB /* FirstLevel.sks */,
 			);
 			name = Levels;
 			sourceTree = "<group>";
@@ -153,6 +149,7 @@
 				4A9E172E1D1D81B9008D6F2A /* Protocols.swift */,
 				4A9E172A1D1D80B6008D6F2A /* Hero.swift */,
 				4A9E17391D1DA3E2008D6F2A /* Animations.swift */,
+				4AE1977F1D241FBB0004AAED /* Actions.sks */,
 			);
 			name = Characters;
 			path = ..;
@@ -161,9 +158,6 @@
 		4A9E17341D1D8CC1008D6F2A /* Atlas */ = {
 			isa = PBXGroup;
 			children = (
-				4A52637A1D1F048500336FD1 /* Walk.atlas */,
-				4A5263781D1F045C00336FD1 /* Jump.atlas */,
-				4A9E17371D1D8D86008D6F2A /* HeroIdle.atlas */,
 			);
 			name = Atlas;
 			path = "Toby's Quest";
@@ -230,12 +224,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A561FE11D1DFA7D00E617CD /* MyTileSet.sks in Resources */,
-				4A5263791D1F045C00336FD1 /* Jump.atlas in Resources */,
+				4AE197801D241FBB0004AAED /* Actions.sks in Resources */,
 				4A09D4AC1D1D792800A0BDFD /* LaunchScreen.storyboard in Resources */,
-				4A52637B1D1F048500336FD1 /* Walk.atlas in Resources */,
-				4A9E17381D1D8D86008D6F2A /* HeroIdle.atlas in Resources */,
+				4AE17F461D243CD2000624EB /* FirstLevel.sks in Resources */,
 				4A09D4A91D1D792800A0BDFD /* Assets.xcassets in Resources */,
-				4A9E17331D1D861E008D6F2A /* FirstLevel.sks in Resources */,
 				4A09D4A71D1D792800A0BDFD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

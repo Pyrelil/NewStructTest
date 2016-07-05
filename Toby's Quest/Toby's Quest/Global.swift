@@ -31,14 +31,29 @@ var isAttacking:Bool = false
 var isJumping:Bool = false
 var doubleJumpAlreadyUsed:Bool = false
 var walkingSlow:Bool = false
+let ySize = texturesPlayer.size().height / 3
+
+
+    
+
+
+
 
 //MARK:--------------------------Platform Nodes
-//let sandMid = SKTexture(imageNamed: "sandMid")
 
 
-var Platform:SKTileMapNode!
-let tileSet = Platform.tileSet
-let tileGroups = tileSet.tileGroups
+//let tileSet = SKTileSet(named: "Platform")
+//let tileSize = CGSize(width: 64.0, height: 64.0)
+//let tileMap = SKTileMapNode(tileSet: tileSet!, columns: 32, rows: 24, tileSize: tileSize)
+//let tileGroup = tileSet?.tileGroups.first
+//var sandMid = tileMap.setTileGroup(tileGroup, forColumn: 16, row: 11)
+
+
+
+//var Platform:SKTileMapNode!
+//var tileSet = Platform.tileSet
+//var tileGroups = tileSet.tileGroups
+
 
 
 //MARK:--------------------------Controls
@@ -55,10 +70,10 @@ let base = SKSpriteNode(imageNamed:"Base")
 let ball = SKSpriteNode(imageNamed:"Ball")
 var stickActive:Bool = false
 
-
+//MARK:--------------------------Scene
 var scenePaused:Bool = false
 
-
+//MARK:--------------------------struct/enum
 struct layers {
     
     static let background: CGFloat = 0

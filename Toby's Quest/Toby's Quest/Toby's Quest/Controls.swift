@@ -26,7 +26,7 @@ class Controls: SKSpriteNode {
         button1.yScale =  button1.xScale
         self.addChild(button1)
         button1.name = "button1"
-        print(button1.position)
+       // print(button1.position)
         
         
         button2.position = CGPoint(x: frame.size.width + 425, y: frame.size.height - 200)

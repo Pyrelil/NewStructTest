@@ -20,19 +20,16 @@ class hero: character,pTargetable{
         
         // override any values here
         scorePoints = 5         //change the default scorePoints from 1 to 5
-        
-        let hTexture = texturesPlayer
         // Create The texture for the top ( visible sprite )
-        let ySize = hTexture.size().height / 3
+        let ySize = texturesPlayer.size().height / 3
         //let size = CGSize(width: xSize, height: ySize)
 
         self.physicsBody = SKPhysicsBody(circleOfRadius: ySize, center: CGPoint(x: -5, y: -11))
-        self.physicsBody?.isDynamic = false
-        self.physicsBody?.affectedByGravity = true            // ( physical body stuff )
+        self.physicsBody?.isDynamic = true
+        self.physicsBody?.affectedByGravity = false            // ( physical body stuff )
         self.physicsBody?.mass = 1.0
         self.name = "hero"
         self.zPosition = layers.characters
-        
         animations.stopWalk()
         self.addChild(animations)
         
