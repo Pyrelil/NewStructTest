@@ -19,6 +19,9 @@ class FirstLevel: SKScene, SKPhysicsContactDelegate {
     var tileHeight : Int = 0
     var autoFollowNode : SKNode?
     
+    
+
+    
 
     let center = CGPoint(x: screenWidth / 2, y: screenHeight / 2)
     
@@ -32,6 +35,7 @@ class FirstLevel: SKScene, SKPhysicsContactDelegate {
         camera?.name = "theCamera"
         camera?.zPosition = layers.characters
         
+        
 
         
         
@@ -40,7 +44,6 @@ class FirstLevel: SKScene, SKPhysicsContactDelegate {
         
         Hero.setupHero()
         self.addChild(Hero)
-        autoFollowNode = Hero
         showHud()
         
 
@@ -95,8 +98,35 @@ class FirstLevel: SKScene, SKPhysicsContactDelegate {
             }
         }
         
+        if let itemsNode = self.childNode(withName: "itemNode") as? SKTileMapNode {
+            // sandPlatforms.physicsBody = SKPhysicsBody(bodies: physicsBodyArray)
+            //sandPlatforms.physicsBody?.affectedByGravity = false
+            let tileSize = itemsNode.tileSize
+            let halfWidth = CGFloat(itemsNode.numberOfColumns) / 2.0 * tileSize.width
+            let halfHeight = CGFloat(itemsNode.numberOfRows) / 2.0 * tileSize.height
+            itemsNode.physicsBody?.isDynamic = false
+            for row in 0..<itemsNode.numberOfRows {
+                for column in 0..<itemsNode.numberOfColumns {
+                    let tileDefinition = itemsNode.tileDefinition(atColumn: column, row: row)
+                    let isCoinGold = tileDefinition?.userData?["coinGold"] as? Bool
+                    //print(tileDefinition)
+                    if (isCoinGold ?? false) {
+                        let x = CGFloat(column) * tileSize.width - halfWidth
+                        let y = CGFloat(row) * tileSize.height - halfHeight
+                        let rect = CGRect(x: 0, y: 0, width: tileSize.width, height: tileSize.height)
+                        let tileNode = SKShapeNode(rect: rect)
+                        tileNode.position = CGPoint(x: x, y: y)
+                       // tileNode.physicsBody = SKPhysicsBody.init(rectangleOf: tileSize, center: CGPoint(x: tileSize.width / 2.0, y: tileSize.height / 2.0))
+                        tileNode.physicsBody = SKPhysicsBody.init(circleOfRadius: halfHeight, center: CGPoint(x: tileSize.width / 2.0, y: tileSize.height / 2.0))
+                        tileNode.physicsBody?.isDynamic = false
+                        itemsNode.addChild(tileNode)
+                    }
+                }
+            }
+        }
         
-        if let CoinGold = self.childNode(withName: "coinGold") as? SKSpriteNode {
+        
+        /*if let CoinGold = self.childNode(withName: "coinGold") as? SKSpriteNode {
             CoinGold.physicsBody = SKPhysicsBody(circleOfRadius: coinSize)
             CoinGold.physicsBody?.isDynamic = true
             CoinGold.physicsBody?.affectedByGravity = false
@@ -105,9 +135,7 @@ class FirstLevel: SKScene, SKPhysicsContactDelegate {
             let rotate = SKAction.rotate(byAngle: 180, duration: 1)
             let rotateAction = SKAction.repeatForever(rotate)
             CoinGold.run(rotateAction)
-            
-        }
- 
+            */
     }
     
 
@@ -124,7 +152,7 @@ class FirstLevel: SKScene, SKPhysicsContactDelegate {
             heroBody = contact.bodyA
         }
         
-        if heroBody.categoryBitMask == HeroCategory && coinGoldBody.categoryBitMask == CoinCategory {
+       /* if heroBody.categoryBitMask == HeroCategory && coinGoldBody.categoryBitMask == CoinCategory {
             print("Contact")
             if let CoinGold = self.childNode(withName: "coinGold") as? SKSpriteNode {
                 CoinGold.removeFromParent()
@@ -133,7 +161,7 @@ class FirstLevel: SKScene, SKPhysicsContactDelegate {
                 Inv1TB = true
                 
             }
-        }
+        }*/
 
     }
     
@@ -310,18 +338,21 @@ class FirstLevel: SKScene, SKPhysicsContactDelegate {
         Hero.update()
        // CameraUpdate()
         //mapUpdate()
-        //camera?.position = Hero.position
+        camera?.position = Hero.position
+        //centerOnNode()
 
         
 
         
     }
     
-   override func didSimulatePhysics() {
+ /*  override func didSimulatePhysics() {
         
-       camera?.position = Hero.position
+       //camera?.position = Hero.position
+        let action = SKAction.move(to: CGPoint.init(x: Hero.position.x, y: Hero.position.y), duration: 0.01)
+        camera?.run(action)
 
-           }
+           }*/
     
     func showHud() {
         
@@ -339,7 +370,7 @@ class FirstLevel: SKScene, SKPhysicsContactDelegate {
         var positionInScene: CGPoint = self.convert(Hero.position, from: self)
         var adjustedX: CGFloat = camera!.position.x - positionInScene.x
         var adjustedY: CGFloat = camera!.position.y - positionInScene.y
-        camera?.position = positionInScene
+        camera?.position = CGPoint(x: adjustedX, y: adjustedY)
     }
     
     
