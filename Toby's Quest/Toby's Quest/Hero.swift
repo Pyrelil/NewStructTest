@@ -46,7 +46,7 @@ class hero: SKSpriteNode {
             
         }
         
-        parent?.childNode(withName: "theCamera")?.position = self.position
+        //parent?.childNode(withName: "theCamera")?.position = self.position
 
     }
     

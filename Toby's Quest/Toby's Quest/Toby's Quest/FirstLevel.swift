@@ -20,7 +20,7 @@ class FirstLevel: SKScene, SKPhysicsContactDelegate {
     var autoFollowNode : SKNode?
     
 
-    
+    let center = CGPoint(x: screenWidth / 2, y: screenHeight / 2)
     
     
     override func didMove(to view: SKView) {
@@ -31,6 +31,9 @@ class FirstLevel: SKScene, SKPhysicsContactDelegate {
         physicsWorld.contactDelegate = self
         camera?.name = "theCamera"
         camera?.zPosition = layers.characters
+        
+
+        
         
         
 
@@ -310,13 +313,15 @@ class FirstLevel: SKScene, SKPhysicsContactDelegate {
         //camera?.position = Hero.position
 
         
+
+        
     }
     
-   /* override func didSimulatePhysics() {
+   override func didSimulatePhysics() {
         
-        let action = SKAction.moveTo(x: Hero.position.x, duration: 0.01)
-        self.camera?.run(action)
-           }*/
+       camera?.position = Hero.position
+
+           }
     
     func showHud() {
         
@@ -330,39 +335,12 @@ class FirstLevel: SKScene, SKPhysicsContactDelegate {
         
     }
     
-    func mapUpdate(){
-        
-        if (autoFollowNode != nil && scene?.view != nil)
-        {
-            position = CGPoint(
-                x: -autoFollowNode!.position.x + scene!.size.width / 2,
-                y: -autoFollowNode!.position.y + scene!.size.height / 2);
-            
-            //check position of the minimap and stop it from going off screen
-            var tempPosition = position;
-            
-            if(tempPosition.x > 0)
-            {
-                tempPosition.x = 0;
-            }
-            
-            if(tempPosition.y > 0)
-            {
-                tempPosition.y = 0;
-            }
-            
-            if(tempPosition.y < -CGFloat(mapHeight * tileHeight) + scene!.size.height){
-                tempPosition.y = -CGFloat(mapHeight * tileHeight) + scene!.size.height
-            }
-            if(tempPosition.x < -CGFloat(mapWidth * tileWidth) + scene!.size.width){
-                tempPosition.x = -CGFloat(mapWidth * tileWidth) + scene!.size.width
-            }
-            
-            //shound round to whole numbers
-            position = tempPosition
-        }
+    func centerOnNode() {
+        var positionInScene: CGPoint = self.convert(Hero.position, from: self)
+        var adjustedX: CGFloat = camera!.position.x - positionInScene.x
+        var adjustedY: CGFloat = camera!.position.y - positionInScene.y
+        camera?.position = positionInScene
     }
-    
     
     
 }
