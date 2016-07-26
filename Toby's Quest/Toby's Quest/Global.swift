@@ -8,12 +8,25 @@
 
 import Foundation
 import SpriteKit
+import GameplayKit
+import UIKit
+import CoreImage
+import CoreGraphics
+
+
+//MARK:--------------------------UI
+let hudSetup = HUDSetup()
+
+
+
+
+
+
 
 //MARK:--------------------------Hero
 let texturesPlayer = SKTexture(imageNamed: "Idle0")
-var HeroIdleAction:SKAction?
 let Hero = hero()
-let animations = Animations()
+//let animations = Animations()
 var health = 10
 var playerSpeedX:CGFloat = 0
 var playerSpeedY:CGFloat = 0
@@ -21,11 +34,6 @@ var jumpAmount:CGFloat = 0
 var maxJump:CGFloat = 30
 var attackAmount:CGFloat = 0
 var maxAttack:CGFloat = 8
-var slowWalkAction:SKAction?
-var walkAction:SKAction?
-var idleAction:SKAction?
-var attackAction:SKAction?
-var jumpAction:SKAction?
 var maxSpeed:CGFloat = 5
 var isAttacking:Bool = false
 var isJumping:Bool = false
@@ -33,8 +41,57 @@ var doubleJumpAlreadyUsed:Bool = false
 var walkingSlow:Bool = false
 let ySize = texturesPlayer.size().height / 3
 
+let HeroNode = SKSpriteNode(imageNamed: "Idle0")
+
+
+
+let HeroIdle = SKAction.init(named: "HeroIdle")
+let HeroIdleAction = SKAction.repeatForever(HeroIdle!)
+
+let HeroWalk = SKAction.init(named: "HeroWalk")
+let HeroWalkFast = SKAction.repeatForever(HeroWalk!)
+
+let HeroSlow = SKAction.init(named: "HeroSlowWalk")
+let HeroSlowWalk = SKAction.repeatForever(HeroSlow!)
+
+let HeroJump = SKAction.init(named: "HeroJump")
+let HeroJumpAction = SKAction.repeat(HeroJump!, count: 1)
+
+
+
+//MARK:--------------------------Items
+let coinGold = SKTexture(imageNamed: "coinGold")
+let coinSize = coinGold.size().height / 3
+
+var coinCount = 0
 
     
+
+
+//MARK:--------------------------Category Collisons
+let HeroCategory   : UInt32 = 0x1 << 0
+let CoinCategory   : UInt32 = 0x1 << 1
+
+
+
+//MARK:--------------------------Items
+var Inv1T = SKTexture(imageNamed: "")
+var Inv1Texture:UIImage = UIImage(cgImage:Inv1T.cgImage())
+var Inv1TB:Bool = false
+var Inv2T = SKTexture(imageNamed: "gemGreen")
+var Inv2Texture: UIImage = UIImage(cgImage:Inv2T.cgImage())
+var Inv3T = SKTexture(imageNamed: "gemRed")
+var Inv3Texture: UIImage = UIImage(cgImage:Inv3T.cgImage())
+var Inv4T = SKTexture(imageNamed: "gemYellow")
+var Inv4Texture: UIImage = UIImage(cgImage:Inv4T.cgImage())
+var Inv5T = SKTexture(imageNamed: "gemBlue")
+var Inv5Texture: UIImage = UIImage(cgImage:Inv5T.cgImage())
+
+var tileSetArray: [String] = ["sandMid"]
+
+
+
+
 
 
 
@@ -42,21 +99,14 @@ let ySize = texturesPlayer.size().height / 3
 //MARK:--------------------------Platform Nodes
 
 
-//let tileSet = SKTileSet(named: "Platform")
-//let tileSize = CGSize(width: 64.0, height: 64.0)
-//let tileMap = SKTileMapNode(tileSet: tileSet!, columns: 32, rows: 24, tileSize: tileSize)
-//let tileGroup = tileSet?.tileGroups.first
-//var sandMid = tileMap.setTileGroup(tileGroup, forColumn: 16, row: 11)
 
 
 
-//var Platform:SKTileMapNode!
-//var tileSet = Platform.tileSet
-//var tileGroups = tileSet.tileGroups
 
 
 
 //MARK:--------------------------Controls
+
 let controls = Controls()
 let menuButton = SKSpriteNode(imageNamed: "gear")
 let unPauseButton:SKSpriteNode = SKSpriteNode()
@@ -72,6 +122,8 @@ var stickActive:Bool = false
 
 //MARK:--------------------------Scene
 var scenePaused:Bool = false
+let screenSize: CGRect = UIScreen.main().bounds
+
 
 //MARK:--------------------------struct/enum
 struct layers {
@@ -89,6 +141,15 @@ enum heroMovement {
     case fastWalk
     case jump
 }
+//MARK:-Functions
+
+func switchGotSwitched() {
+    print("Switched")
+    }
+
+
+
+
 
 
 

@@ -23,6 +23,9 @@
 		4A9E173A1D1DA3E2008D6F2A /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9E17391D1DA3E2008D6F2A /* Animations.swift */; };
 		4AE17F461D243CD2000624EB /* FirstLevel.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4AE17F451D243CD2000624EB /* FirstLevel.sks */; };
 		4AE197801D241FBB0004AAED /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4AE1977F1D241FBB0004AAED /* Actions.sks */; };
+		4AF87D931D32C53F00FCD0DC /* HUD.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF87D921D32C53F00FCD0DC /* HUD.xib */; };
+		4AF87D951D32C55F00FCD0DC /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF87D941D32C55F00FCD0DC /* HUD.swift */; };
+		4AF87D971D32C56C00FCD0DC /* HUDSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF87D961D32C56C00FCD0DC /* HUDSetup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		4A9E17391D1DA3E2008D6F2A /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		4AE17F451D243CD2000624EB /* FirstLevel.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FirstLevel.sks; sourceTree = "<group>"; };
 		4AE1977F1D241FBB0004AAED /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		4AF87D921D32C53F00FCD0DC /* HUD.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HUD.xib; sourceTree = "<group>"; };
+		4AF87D941D32C55F00FCD0DC /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
+		4AF87D961D32C56C00FCD0DC /* HUDSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUDSetup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 			isa = PBXGroup;
 			children = (
 				4A9A133F1D201733007F60FE /* Controls.swift */,
+				4AF87D921D32C53F00FCD0DC /* HUD.xib */,
+				4AF87D941D32C55F00FCD0DC /* HUD.swift */,
+				4AF87D961D32C56C00FCD0DC /* HUDSetup.swift */,
 			);
 			name = UIControl;
 			sourceTree = "<group>";
@@ -226,6 +235,7 @@
 				4A561FE11D1DFA7D00E617CD /* MyTileSet.sks in Resources */,
 				4AE197801D241FBB0004AAED /* Actions.sks in Resources */,
 				4A09D4AC1D1D792800A0BDFD /* LaunchScreen.storyboard in Resources */,
+				4AF87D931D32C53F00FCD0DC /* HUD.xib in Resources */,
 				4AE17F461D243CD2000624EB /* FirstLevel.sks in Resources */,
 				4A09D4A91D1D792800A0BDFD /* Assets.xcassets in Resources */,
 				4A09D4A71D1D792800A0BDFD /* Main.storyboard in Resources */,
@@ -242,9 +252,11 @@
 				4A09D4A21D1D792800A0BDFD /* FirstLevel.swift in Sources */,
 				4A09D4A41D1D792800A0BDFD /* GameViewController.swift in Sources */,
 				4A9E172D1D1D8163008D6F2A /* Character.swift in Sources */,
+				4AF87D971D32C56C00FCD0DC /* HUDSetup.swift in Sources */,
 				4A9A133D1D1F3A2F007F60FE /* PlatformNodes.swift in Sources */,
 				4A9E172F1D1D81B9008D6F2A /* Protocols.swift in Sources */,
 				4A09D49E1D1D792800A0BDFD /* AppDelegate.swift in Sources */,
+				4AF87D951D32C55F00FCD0DC /* HUD.swift in Sources */,
 				4A9E172B1D1D80B6008D6F2A /* Hero.swift in Sources */,
 				4A9A13401D201733007F60FE /* Controls.swift in Sources */,
 				4A9E173A1D1DA3E2008D6F2A /* Animations.swift in Sources */,

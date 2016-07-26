@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11163.2" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11133"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HUD" customModule="Toby_s_Quest" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" id="iN0-l3-epB" userLabel="Controls" customClass="HUDSetup" customModule="Toby_s_Quest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNA-Ep-2Pm">
+                    <subviews>
+                        <switch opaque="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t01-ro-Nho" userLabel="SwitchTapped">
+                            <connections>
+                                <action selector="TouchesSwitched:" destination="iN0-l3-epB" eventType="valueChanged" id="A5E-Y2-iUu"/>
+                            </connections>
+                        </switch>
+                        <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SqH-tS-zj2" userLabel="Button2">
+                            <frame key="frameInset" minX="890" minY="525" width="110" height="110"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="Button"/>
+                            <connections>
+                                <action selector="Button2:" destination="iN0-l3-epB" eventType="touchUpInside" id="yjx-H7-dsD"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCs-y0-KW9" userLabel="Button1">
+                            <frame key="frameInset" minX="799" minY="607" width="110" height="110"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="Button"/>
+                        </button>
+                        <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5L-6w-icg" userLabel="PauseButton">
+                            <frame key="frameInset" minX="16" minY="8" width="70" height="70"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="gear"/>
+                            <connections>
+                                <action selector="PauseButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="ePg-28-3di"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Wd-em-MOf">
+                            <frame key="frameInset" minX="412" minY="284" width="200" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.80784314869999996" green="0.027450980619999999" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                            <state key="normal" title="Un-Pause">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="UnPause:" destination="iN0-l3-epB" eventType="touchUpInside" id="yv6-UE-IBs"/>
+                            </connections>
+                        </button>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleAspectFill" fixedFrame="YES" image="Base" translatesAutoresizingMaskIntoConstraints="NO" id="zZe-zU-KiU">
+                            <frame key="frameInset" minX="80" minY="506" width="100" height="100"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleAspectFill" fixedFrame="YES" image="Ball" translatesAutoresizingMaskIntoConstraints="NO" id="eze-Gd-jcT">
+                            <frame key="frameInset" minX="80" minY="506" width="100" height="100"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                        <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqW-FT-BUZ">
+                            <frame key="frameInset" minX="491" minY="8" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8n-c2-Vy3" userLabel="MenuButton">
+                            <frame key="frameInset" minX="930" minY="1" width="70" height="70"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                            <state key="normal" image="gear"/>
+                            <connections>
+                                <action selector="MenuButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="kAO-7q-hhs"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="t01-ro-Nho" secondAttribute="bottom" constant="717" id="1bb-o7-mTd"/>
+                        <constraint firstItem="t01-ro-Nho" firstAttribute="top" secondItem="xNA-Ep-2Pm" secondAttribute="top" constant="20" id="Cub-US-5bC"/>
+                        <constraint firstItem="t01-ro-Nho" firstAttribute="leading" secondItem="xNA-Ep-2Pm" secondAttribute="leading" constant="488" id="VQx-pR-w5g"/>
+                        <constraint firstAttribute="trailing" secondItem="t01-ro-Nho" secondAttribute="trailing" constant="487" id="YQ5-Um-gY7"/>
+                        <constraint firstAttribute="bottom" secondItem="t01-ro-Nho" secondAttribute="bottom" constant="717" id="dlf-bL-1so"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="xNA-Ep-2Pm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Xll-Fe-oF8"/>
+                <constraint firstItem="xNA-Ep-2Pm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qvY-vf-uZq"/>
+            </constraints>
+            <connections>
+                <outlet property="CoinCoint" destination="XqW-FT-BUZ" id="e5S-rQ-GXx"/>
+                <outlet property="Inv1" destination="jGb-xn-LQa" id="r2a-1L-Dka"/>
+                <outlet property="Inv2" destination="tZH-vk-Rfa" id="b2W-ar-CPp"/>
+                <outlet property="Inv3" destination="xC7-H6-Nlf" id="r7h-MO-yQ4"/>
+                <outlet property="Inv4" destination="Arb-ju-2rn" id="Gqr-eb-XhL"/>
+                <outlet property="Inv5" destination="lao-4Q-4SY" id="vzg-n2-7UF"/>
+                <outlet property="InventoryTest" destination="YDj-tU-GCB" id="T78-bk-iSx"/>
+                <outlet property="InventoryView" destination="1BZ-ZZ-EoW" id="x7m-2b-2Lp"/>
+                <outlet property="JoystickBall" destination="eze-Gd-jcT" id="Egy-Wo-atO"/>
+                <outlet property="JoystickBase2" destination="zZe-zU-KiU" id="neS-mW-u3B"/>
+                <outlet property="UnPause" destination="3Wd-em-MOf" id="MaZ-YZ-KiO"/>
+            </connections>
+            <point key="canvasLocation" x="98" y="59"/>
+        </view>
+        <view multipleTouchEnabled="YES" contentMode="scaleAspectFill" id="1BZ-ZZ-EoW" userLabel="Inventory">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDj-tU-GCB">
+                    <frame key="frameInset" minX="462" minY="334" width="100" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Test">
+                        <color key="titleColor" red="1" green="0.028418947060000001" blue="0.13357066040000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="InventoryTestButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="bPr-5Q-DvM"/>
+                    </connections>
+                </button>
+                <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGb-xn-LQa" userLabel="Inv1">
+                    <frame key="frameInset" minX="38" minY="38" width="64" height="64"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="star"/>
+                </button>
+                <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZH-vk-Rfa" userLabel="Inv2">
+                    <frame key="frameInset" minX="38" minY="146" width="64" height="64"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="star"/>
+                </button>
+                <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xC7-H6-Nlf" userLabel="Inv3">
+                    <frame key="frameInset" minX="38" minY="254" width="64" height="64"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="star"/>
+                </button>
+                <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arb-ju-2rn" userLabel="Inv4">
+                    <frame key="frameInset" minX="38" minY="362" width="64" height="64"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="star"/>
+                </button>
+                <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lao-4Q-4SY" userLabel="Inv5">
+                    <frame key="frameInset" minX="38" minY="470" width="64" height="64"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="star"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.67000001669999998" green="0.67000001669999998" blue="0.67000001669999998" alpha="1" colorSpace="deviceRGB"/>
+            <point key="canvasLocation" x="98" y="1284"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Ball" width="100" height="100"/>
+        <image name="Base" width="140" height="141"/>
+        <image name="Button" width="140" height="141"/>
+        <image name="gear" width="25" height="25"/>
+        <image name="star" width="64" height="64"/>
+    </resources>
+</document>

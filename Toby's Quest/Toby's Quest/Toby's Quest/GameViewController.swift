@@ -30,13 +30,7 @@ class GameViewController: UIViewController {
             skView.showsPhysics = true
             skView.showsDrawCount = true
             skView.isMultipleTouchEnabled = true
-            animations.setUpIdleAction()
-            animations.setUpJumpAction()
-            animations.setUpWalkAnimation()
-            controls.setupButtons()
-        
-            
-            
+
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
             
@@ -46,6 +40,7 @@ class GameViewController: UIViewController {
             
             //Set scene size. 
             scene.size = skView.bounds.size
+            scene.name = "FirstScene"
             
             
             skView.presentScene(scene)
